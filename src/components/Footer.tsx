@@ -76,10 +76,15 @@ export default function Footer() {
               gap: "12px",
             }}
           >
-            {["Who I Am", "What I Do", "My Approach", "Blog"].map((item) => (
+            {[
+              { label: "Who I Am", href: "#who-i-am" },
+              { label: "What I Do", href: "#services" },
+              { label: "My Approach", href: "#philosophy" },
+              { label: "Blog", href: "#blog" },
+            ].map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                key={item.label}
+                href={item.href}
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "0.68rem",
@@ -92,7 +97,7 @@ export default function Footer() {
                 }}
                 className="footer-link"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>

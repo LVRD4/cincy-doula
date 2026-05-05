@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import WhoIAm from "@/components/WhoIAm";
 import Services from "@/components/Services";
 import Philosophy from "@/components/Philosophy";
+import Blog from "@/components/Blog";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <WhoIAm />
         <Services />
         <Philosophy />
+        <Blog />
         <FinalCTA />
       </main>
       <Footer />
