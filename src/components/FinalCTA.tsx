@@ -1,6 +1,6 @@
 "use client";
 
-const CALENDLY_URL = "https://calendly.com/erikaharrisondoula";
+const CALENDLY_URL = "https://calendly.com/erikaharrisoncincydoula/30min";
 
 export default function FinalCTA() {
   return (

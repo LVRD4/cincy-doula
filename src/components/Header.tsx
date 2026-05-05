@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const CALENDLY_URL = "https://calendly.com/erikaharrisondoula";
+const CALENDLY_URL = "https://calendly.com/erikaharrisoncincydoula/30min";
 
 const navLinks = [
   { label: "Who I Am", href: "#who-i-am" },

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Resources, insights, and support for your pregnancy, birth, and postpartum journey.",
 };
 
-const CALENDLY_URL = "https://calendly.com/erikaharrisondoula";
+const CALENDLY_URL = "https://calendly.com/erikaharrisoncincydoula/30min";
 
 export default function BlogPage() {
   return (

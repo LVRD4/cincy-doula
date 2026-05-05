@@ -29,59 +29,19 @@ export default function WhoIAm() {
             margin: "0 auto",
           }}
         >
-          <div
-            style={{
-              position: "relative",
-              aspectRatio: "4/5",
-              overflow: "hidden",
-              backgroundColor: "#f0f0ee",
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/erika-portrait.jpeg"
+            alt="Erika Harrison, Cincinnati Doula"
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = "none";
             }}
-          >
-            {/* Drop your photo as /public/erika-portrait.jpg */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/erika-portrait.jpg"
-              alt="Erika Harrison, Cincinnati Doula"
-              onError={(e) => {
-                const el = e.target as HTMLImageElement;
-                el.style.display = "none";
-              }}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center top",
-              }}
-            />
-
-            {/* Placeholder shown when no photo exists */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#f0f0ee",
-              }}
-            >
-              <p
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  color: "#999",
-                  textAlign: "center",
-                  padding: "20px",
-                }}
-              >
-                Add photo as
-                <br />
-                /public/erika-portrait.jpg
-              </p>
-            </div>
-          </div>
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+            }}
+          />
         </div>
 
         {/* Text */}

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { posts, getPostBySlug } from "@/lib/posts";
 import type { Metadata } from "next";
 
-const CALENDLY_URL = "https://calendly.com/erikaharrisondoula";
+const CALENDLY_URL = "https://calendly.com/erikaharrisoncincydoula/30min";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
