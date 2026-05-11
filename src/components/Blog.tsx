@@ -86,7 +86,7 @@ export default function Blog() {
                     borderRadius: "100px",
                   }}
                 >
-                  {post.tag}
+                  {post.category}
                 </span>
                 <span
                   style={{

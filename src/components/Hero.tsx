@@ -2,7 +2,12 @@
 
 const CALENDLY_URL = "https://calendly.com/erikaharrisoncincydoula/30min";
 
-export default function Hero() {
+interface HeroProps {
+  heroImageUrl?: string | null;
+}
+
+export default function Hero({ heroImageUrl }: HeroProps) {
+  const imgSrc = heroImageUrl ?? "/IMG_1046.png";
   return (
     <section
       id="hero"
@@ -35,7 +40,7 @@ export default function Hero() {
       */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/IMG_1046.png"
+        src={imgSrc}
         alt=""
         aria-hidden="true"
         onError={(e) => {

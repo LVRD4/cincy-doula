@@ -90,6 +90,46 @@ export default function FinalCTA() {
         <p className="cta-subtext" style={{ color: "#666" }}>
           Free 30-minute consult
         </p>
+
+        {/* Contact details */}
+        <div
+          style={{
+            marginTop: "48px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "12px",
+            alignItems: "center",
+          }}
+        >
+          {[
+            { label: "Phone", value: "513.401.5808", href: "tel:5134015808" },
+            { label: "Email", value: "erikaharrisoncincydoula@gmail.com", href: "mailto:erikaharrisoncincydoula@gmail.com" },
+            { label: "Instagram", value: "@erikaharrisoncincydoula", href: "https://instagram.com/erikaharrisoncincydoula" },
+          ].map((c) => (
+            <a
+              key={c.label}
+              href={c.href}
+              target={c.href.startsWith("http") ? "_blank" : undefined}
+              rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "0.78rem",
+                fontWeight: 300,
+                color: "#444",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "baseline",
+                gap: "10px",
+                transition: "color 0.2s",
+              }}
+            >
+              <span style={{ fontSize: "0.55rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#9b97c4", minWidth: "60px", textAlign: "right" }}>
+                {c.label}
+              </span>
+              {c.value}
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

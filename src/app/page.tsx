@@ -6,14 +6,19 @@ import Philosophy from "@/components/Philosophy";
 import Blog from "@/components/Blog";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import { getSiteSettings } from "@/sanity/lib/queries";
 
-export default function Home() {
+export const revalidate = 300;
+
+export default async function Home() {
+  const settings = await getSiteSettings();
+
   return (
     <>
       <Header />
       <main style={{ paddingTop: "68px" }}>
-        <Hero />
-        <WhoIAm />
+        <Hero heroImageUrl={settings.heroImageUrl} />
+        <WhoIAm portraitUrl={settings.portraitUrl} />
         <Services />
         <Philosophy />
         <Blog />
