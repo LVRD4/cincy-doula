@@ -7,7 +7,7 @@ export default defineConfig({
   name: "erika-harrison-doula",
   title: "Erika Harrison Doula — Content Studio",
 
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "not-set",
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production",
 
   basePath: "/studio",

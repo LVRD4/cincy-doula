@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Who I Am", href: "#who-i-am" },
   { label: "What I Do", href: "#services" },
   { label: "My Approach", href: "#philosophy" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Blog", href: "#blog" },
   { label: "Talk to a Doula", href: CALENDLY_URL, external: true },
 ];
@@ -108,7 +109,7 @@ export default function Header() {
             }}
             className="desktop-nav"
           >
-            {navLinks.slice(0, 4).map((link) => (
+            {navLinks.slice(0, 5).map((link) => (
               <a
                 key={link.label}
                 href={link.href}

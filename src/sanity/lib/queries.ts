@@ -66,6 +66,13 @@ const ALL_SLUGS_QUERY = `
   *[_type == "post" && !(_id in path("drafts.**"))] { "slug": slug.current }
 `;
 
+const TESTIMONIALS_QUERY = `
+  *[_type == "testimonial" && !(_id in path("drafts.**"))]
+  | order(order asc) {
+    _id, quote, clientName, serviceType
+  }
+`;
+
 const SITE_SETTINGS_QUERY = `
   *[_type == "siteSettings" && _id == "siteSettings"][0] {
     "heroImageUrl": heroImage.asset->url,
@@ -105,6 +112,22 @@ export async function getAllSlugs(): Promise<string[]> {
     return data.map((d) => d.slug);
   } catch {
     return localPosts.map((p) => p.slug);
+  }
+}
+
+export interface Testimonial {
+  _id: string;
+  quote: string;
+  clientName: string;
+  serviceType?: string;
+}
+
+export async function getTestimonials(): Promise<Testimonial[]> {
+  if (!isSanityConfigured) return [];
+  try {
+    return await getClient().fetch<Testimonial[]>(TESTIMONIALS_QUERY, {}, { next: { revalidate: 300 } });
+  } catch {
+    return [];
   }
 }
 

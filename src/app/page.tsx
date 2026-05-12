@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import WhoIAm from "@/components/WhoIAm";
 import Services from "@/components/Services";
 import Philosophy from "@/components/Philosophy";
+import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -21,6 +22,7 @@ export default async function Home() {
         <WhoIAm portraitUrl={settings.portraitUrl} />
         <Services />
         <Philosophy />
+        <Testimonials />
         <Blog />
         <FinalCTA />
       </main>

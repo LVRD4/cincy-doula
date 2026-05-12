@@ -13,8 +13,6 @@ export interface Post {
   content: string;
 }
 
-export const categories: Category[] = ["Birth", "Postpartum", "Preparation", "Newborn", "Wellness"];
-
 export const posts: Post[] = [];
 
 export function getPostBySlug(slug: string): Post | undefined {
