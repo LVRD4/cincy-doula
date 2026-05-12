@@ -107,9 +107,9 @@ export const postType = defineType({
     }),
   ],
   preview: {
-    select: { title: "title", category: "category", media: "featuredImage" },
-    prepare({ title, category, media }) {
-      return { title, subtitle: category, media };
+    select: { title: "title", subtitle: "category.title", media: "featuredImage" },
+    prepare({ title, subtitle, media }) {
+      return { title, subtitle, media };
     },
   },
   orderings: [
