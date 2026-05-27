@@ -173,6 +173,30 @@ export default function Footer() {
           >
             © {year} Erika Harrison · Cincinnati, Ohio
           </p>
+
+          {/* LGBTQ+ inclusive badge */}
+          <div style={{ padding: "2px", borderRadius: "999px", background: "linear-gradient(90deg, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D)", display: "inline-block" }}>
+            <div
+              style={{
+                backgroundColor: "#0a0a0a",
+                borderRadius: "999px",
+                padding: "5px 14px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: "0.55rem",
+                  fontWeight: 400,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.75)",
+                }}
+              >
+                LGBTQ+ Affirming
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
